@@ -1,0 +1,63 @@
+CREATE DATABASE zafirodb;
+
+CREATE TABLE usuario 
+(
+	id INT PRIMARY KEY AUTO_INCREMENT, 
+	nombres VARCHAR(100) NOT NULL,
+	apellidos VARCHAR(100) NOT NULL,
+	telefono VARCHAR(50) NOT NULL,
+	celular VARCHAR(50) NOT NULL,
+	correo VARCHAR(100) NOT NULL,
+	direccion VARCHAR(100),
+	clave VARCHAR(100) NOT NULL
+)
+ENGINE=INNODB;
+
+CREATE TABLE tarjeta 
+(
+    	cuenta INT PRIMARY KEY,
+	idUsuario INT  NOT NULL,
+    	fechaExpiracion DATE NOT NULL,
+    	digitosVerificacion INT  NOT NULL,
+	tipo VARCHAR(50) NOT NULL,
+	FOREIGN KEY (idUsuario) REFERENCES usuario(id)
+   
+)
+ENGINE=INNODB;
+
+CREATE TABLE plan (
+    	id INT PRIMARY KEY AUTO_INCREMENT,
+    	nombre VARCHAR(50) NOT NULL,
+    	descripcion VARCHAR(200),
+    	precio INT NOT NULL
+   
+)   
+ENGINE=INNODB;
+
+CREATE TABLE reserva 
+(
+    	id INT PRIMARY KEY AUTO_INCREMENT,
+	idUsuario INT  NOT NULL,
+	idPlan INT  NOT NULL,
+	fecha DATE NOT NULL,
+	hora TIME NOT NULL,	
+	FOREIGN KEY (idUsuario) REFERENCES usuario(id), 
+	FOREIGN KEY (idPlan) REFERENCES plan(id)  
+    
+)
+ENGINE=INNODB;
+
+CREATE TABLE pago
+(
+    	id INT PRIMARY KEY AUTO_INCREMENT,
+	idReserva INT  NOT NULL,
+	nCuenta INT  NOT NULL,
+	tipoTarjeta VARCHAR(50) NOT NULL,
+    	fecha DATE NOT NULL,
+	hora TIME NOT NULL,
+	banco VARCHAR(100) NOT NULL,
+    	FOREIGN KEY (idReserva) REFERENCES reserva(id),
+	FOREIGN KEY (nCuenta) REFERENCES tarjeta(cuenta)
+)
+ENGINE=INNODB;
+
