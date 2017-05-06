@@ -11,4 +11,6 @@ public function iniciarSesion()
 		$this->load->view('Vista_basica/footer');
 	}
 
+
+
 }	

@@ -1,14 +1,19 @@
-language: php
+  
 
+language: php
 php:
-  - 7.1
+  - '5.4'
+  - '5.5'
+  - '5.6'
+  - '7.0'
+  - '7.1'
+  - hhvm
+  - nightly  
 
 
 script:
-  - cd application/tests
+  - cd application/tests/controllers
   - phpunit 
 os:
   - Windows
-
-  
 
