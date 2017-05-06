@@ -11,9 +11,3 @@ php:
   - nightly  
 
 
-script:
-  - cd application/tests/controllers
-  - phpunit 
-os:
-  - Windows
-
