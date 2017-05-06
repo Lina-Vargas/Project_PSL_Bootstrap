@@ -11,3 +11,8 @@ php:
   - nightly  
 
 
+
+script:
+  - cd application/tests
+os:
+  - Windows
