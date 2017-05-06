@@ -25,11 +25,11 @@
         </footer>
   </div>
 -->
-    <footer class="footer">
-      <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
-      </div>
+    <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2017 Zafiro eventos &middot;</p>
     </footer>
+
 
 
     <!-- Bootstrap core JavaScript

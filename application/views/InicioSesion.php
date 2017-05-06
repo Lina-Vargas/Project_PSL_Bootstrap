@@ -5,17 +5,17 @@
             <p id="profile-name" class="profile-name-card"></p>
             <form class="form-signin">
                 <span id="reauth-email" class="reauth-email"></span>
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <input type="email" id="correo" class="form-control" placeholder="Correo Electrónico" required autofocus>
+                <input type="password" id="clave" class="form-control" placeholder="Contraseña" required>
                 <div id="remember" class="checkbox">
                     <label>
-                        <input type="checkbox" value="remember-me"> Remember me
+                        <input type="checkbox" value="remember-me"> Recordar Usuario
                     </label>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Entrar</button>
             </form><!-- /form -->
             <a href="#" class="forgot-password">
-                Forgot the password?
+                Olvidaste la clave?
             </a>
         </div><!-- /card-container -->
   </div><!-- /container -->
