@@ -23,6 +23,16 @@ return $queryy->result();
 
 
 }
+
+
+function revisarid($documento){
+$queryyy = $this->db->where('id',$documento);
+$queryyy = $this->db->get('usuario');
+return $queryyy->result();
+
+
+}
+
 function crearusuario($datosusuario){
 
 $this->db->insert('usuario',array(
