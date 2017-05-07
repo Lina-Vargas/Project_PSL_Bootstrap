@@ -55,7 +55,7 @@ if($this->form_validation->run()==True){
       
 
 else{
-          redirect('plan');
+          redirect('Plan');
       }
   }
 

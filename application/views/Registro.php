@@ -41,7 +41,7 @@
 <br><br>
 <?= form_label('Clave *:','clave')?>
 <?= form_input($clave)?><?php echo form_error('clave')?>
-          
+      <br>
       <input type="submit" name="submit" id="submit" value="Registrar Usuario" class="btn btn-info pull-right">
     </div>
   </form>

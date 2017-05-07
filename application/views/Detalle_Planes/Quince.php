@@ -4,37 +4,58 @@
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">Plan 1. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="<?php echo $img1; ?>" alt="Generic placeholder image">
-        </div>
-      </div>
+          <h2 class="featurette-heading">Planes <span class="text-muted">choose your plan.</span></h2>
+          <p class="lead">    <body>
 
-      <hr class="featurette-divider">
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
 
-      <div class="row featurette">
-        <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">Plan2. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" data-src="<?php echo $img2; ?>" alt="Generic placeholder image">
-        </div>
-      </div>
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
 
-      <hr class="featurette-divider">
 
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading"Plan 3. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+</style>
+
+      <center><h1 style="background-color:"";color:white"> Lista de Planes</h1></center>
+
+
+   <table>
+  <tr style="background-color:"";color:white">
+ 
+    <th>Nombre</th>
+    <th>Descripcion</th>
+    <th>Precio</th>
+    <th>Realizar Reserva</th>
+    
+  </tr>
+      <?php  foreach($datosdelplan as $plan): ?>
+         
+            
+          
+            <tr>
+            <td style="color:black"> <?php echo $plan->nombre ?></td>
+            <td style="color:black"> <?php echo $plan->descripcion ?> </td>
+            <td style="color:black"> <?php echo $plan->precio ?> </td>
+            <td><a href="">Realizar Reserva</a></td>
+            
+            </tr>
+
+     
+            
+
+         <?php endforeach; ?>
+      </table>
+   
         </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="<?php echo $img3; ?>" alt="Generic placeholder image">
-        </div>
-      </div>
+        
+            </div>
 
       <hr class="featurette-divider">
 
