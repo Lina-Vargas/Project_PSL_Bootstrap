@@ -35,7 +35,9 @@ td, th {
     <th>Realizar Reserva</th>
     
   </tr>
-      <?php  foreach($datosdelplan as $plan): ?>
+      <?php 
+
+       foreach($datosdelplan as $plan): ?>
          
             
           
@@ -43,7 +45,7 @@ td, th {
             <td style="color:black"> <?php echo $plan->nombre ?></td>
             <td style="color:black"> <?php echo $plan->descripcion ?> </td>
             <td style="color:black"> <?php echo $plan->precio ?> </td>
-            <td><a href="<?=base_url()?>Reserva/index/<?php echo $plan->id?>">Realizar Reserva</a></td>
+            <td><a href="<?=base_url()?>Reserva/hola/<?php echo $plan->id?>">Realizar Reserva</a></td>
             
             </tr>
 

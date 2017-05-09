@@ -24,7 +24,7 @@ $this->load->view('Vista_basica/footer');
 public function Quince()
 	{
 	$datos = array('titulo' => "Inicio  Sesión");
-		$datosplanes['datosdelplan']=$this->Planes->obtenerdatosplan();
+		$datosplanes['datosdelplan']=$this->Planes->obtenerquince();
 		
 		//$imagenes = array('img1' => 'http://localhost/Project_PSL_Bootstrap/imagenes/pag_Quince/Quince_tadicional.JPG', 'img2' => 'http://localhost/Project_PSL_Bootstrap/imagenes/pag_Quince/Quince_tematico', 'img3' => 'http://localhost/Project_PSL_Bootstrap/imagenes/pag_Quince/solo_Salon' );
 		$this->load->view('Vista_basica/header', $datos);
@@ -34,6 +34,89 @@ public function Quince()
 	}
 	
 
+	public function Cumple()
+	{
+	$datos = array('titulo' => "Inicio  Sesión");
+		$datosplanes['datosdelplan']=$this->Planes->obtenercumple();
+		
+		//$imagenes = array('img1' => 'http://localhost/Project_PSL_Bootstrap/imagenes/pag_Quince/Quince_tadicional.JPG', 'img2' => 'http://localhost/Project_PSL_Bootstrap/imagenes/pag_Quince/Quince_tematico', 'img3' => 'http://localhost/Project_PSL_Bootstrap/imagenes/pag_Quince/solo_Salon' );
+		$this->load->view('Vista_basica/header', $datos);
+		//$this->load->view('Detalle_Planes/Quince', $imagenes);
+		$this->load->view('Detalle_Planes/Quince', $datosplanes);
+		$this->load->view('Vista_basica/footer');
+	}
+
+public function Evento()
+	{
+	$datos = array('titulo' => "Inicio  Sesión");
+		$datosplanes['datosdelplan']=$this->Planes->obtenerevento();
+		
+		//$imagenes = array('img1' => 'http://localhost/Project_PSL_Bootstrap/imagenes/pag_Quince/Quince_tadicional.JPG', 'img2' => 'http://localhost/Project_PSL_Bootstrap/imagenes/pag_Quince/Quince_tematico', 'img3' => 'http://localhost/Project_PSL_Bootstrap/imagenes/pag_Quince/solo_Salon' );
+		$this->load->view('Vista_basica/header', $datos);
+		//$this->load->view('Detalle_Planes/Quince', $imagenes);
+		$this->load->view('Detalle_Planes/Quince', $datosplanes);
+		$this->load->view('Vista_basica/footer');
+	}
+
+public function Comuni()
+	{
+	$datos = array('titulo' => "Inicio  Sesión");
+		$datosplanes['datosdelplan']=$this->Planes->obtenercomunion();
+		
+		//$imagenes = array('img1' => 'http://localhost/Project_PSL_Bootstrap/imagenes/pag_Quince/Quince_tadicional.JPG', 'img2' => 'http://localhost/Project_PSL_Bootstrap/imagenes/pag_Quince/Quince_tematico', 'img3' => 'http://localhost/Project_PSL_Bootstrap/imagenes/pag_Quince/solo_Salon' );
+		$this->load->view('Vista_basica/header', $datos);
+		//$this->load->view('Detalle_Planes/Quince', $imagenes);
+		$this->load->view('Detalle_Planes/Quince', $datosplanes);
+		$this->load->view('Vista_basica/footer');
+	}
+
+
+public function Boda()
+	{
+	$datos = array('titulo' => "Inicio  Sesión");
+		$datosplanes['datosdelplan']=$this->Planes->obtenerboda();
+		
+		//$imagenes = array('img1' => 'http://localhost/Project_PSL_Bootstrap/imagenes/pag_Quince/Quince_tadicional.JPG', 'img2' => 'http://localhost/Project_PSL_Bootstrap/imagenes/pag_Quince/Quince_tematico', 'img3' => 'http://localhost/Project_PSL_Bootstrap/imagenes/pag_Quince/solo_Salon' );
+		$this->load->view('Vista_basica/header', $datos);
+		//$this->load->view('Detalle_Planes/Quince', $imagenes);
+		$this->load->view('Detalle_Planes/Quince', $datosplanes);
+		$this->load->view('Vista_basica/footer');
+	}
+	public function Bauti()
+	{
+	$datos = array('titulo' => "Inicio  Sesión");
+		$datosplanes['datosdelplan']=$this->Planes->obtenerbautizo();
+		
+		//$imagenes = array('img1' => 'http://localhost/Project_PSL_Bootstrap/imagenes/pag_Quince/Quince_tadicional.JPG', 'img2' => 'http://localhost/Project_PSL_Bootstrap/imagenes/pag_Quince/Quince_tematico', 'img3' => 'http://localhost/Project_PSL_Bootstrap/imagenes/pag_Quince/solo_Salon' );
+		$this->load->view('Vista_basica/header', $datos);
+		//$this->load->view('Detalle_Planes/Quince', $imagenes);
+		$this->load->view('Detalle_Planes/Quince', $datosplanes);
+		$this->load->view('Vista_basica/footer');
+	}
+
+public function Baby()
+	{
+	$datos = array('titulo' => "Inicio  Sesión");
+		$datosplanes['datosdelplan']=$this->Planes->obtenerbaby();
+		
+		//$imagenes = array('img1' => 'http://localhost/Project_PSL_Bootstrap/imagenes/pag_Quince/Quince_tadicional.JPG', 'img2' => 'http://localhost/Project_PSL_Bootstrap/imagenes/pag_Quince/Quince_tematico', 'img3' => 'http://localhost/Project_PSL_Bootstrap/imagenes/pag_Quince/solo_Salon' );
+		$this->load->view('Vista_basica/header', $datos);
+		//$this->load->view('Detalle_Planes/Quince', $imagenes);
+		$this->load->view('Detalle_Planes/Quince', $datosplanes);
+		$this->load->view('Vista_basica/footer');
+	}
+
+public function Fiesta()
+	{
+	$datos = array('titulo' => "Inicio  Sesión");
+		$datosplanes['datosdelplan']=$this->Planes->obtenerfiesta();
+		
+		//$imagenes = array('img1' => 'http://localhost/Project_PSL_Bootstrap/imagenes/pag_Quince/Quince_tadicional.JPG', 'img2' => 'http://localhost/Project_PSL_Bootstrap/imagenes/pag_Quince/Quince_tematico', 'img3' => 'http://localhost/Project_PSL_Bootstrap/imagenes/pag_Quince/solo_Salon' );
+		$this->load->view('Vista_basica/header', $datos);
+		//$this->load->view('Detalle_Planes/Quince', $imagenes);
+		$this->load->view('Detalle_Planes/Quince', $datosplanes);
+		$this->load->view('Vista_basica/footer');
+	}
 
 
 }

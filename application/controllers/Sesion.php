@@ -10,6 +10,8 @@ $this->load->helper('form');
 $this->load->model('Usuario');
 $this->load->helper('url');
 $this->load->library('form_validation');
+$this->load->library("session");
+
 }
 
 public function iniciarSesion()
@@ -55,7 +57,14 @@ if($this->form_validation->run()==True){
       
 
 else{
-          redirect('Plan');
+	$usuario_data = array(
+               'correo' => $email,
+                'clave'=>$password,    
+               'logueado' => TRUE
+               );
+          $this->session->set_userdata($usuario_data);
+          redirect('plan');
+          
       }
   }
 
