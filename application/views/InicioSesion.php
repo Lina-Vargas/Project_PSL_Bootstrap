@@ -7,7 +7,7 @@
            
             <?php
      $correo= array('name'=>'correo', 'class' => 'form-control', 'value' => set_value('correo'));
-     $clave= array('name'=>'clave', 'class' => 'form-control', 'value' => set_value('clave'));
+     $clave= array('name'=>'clave', 'class' => 'form-control', 'type'=>'password','value' => set_value('clave'));
      
 ?>
             
