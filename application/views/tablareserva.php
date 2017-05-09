@@ -1,10 +1,9 @@
 <!-- Descripció de planes -->
-
-      <hr class="featurette-divider">
+    
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">Planes <span class="text-muted">choose your plan.</span></h2>
+          <h2 class="featurette-heading">Planes<span class="text-muted"></span></h2>
           <p class="lead">    <body>
 
 <style>
@@ -23,7 +22,7 @@ td, th {
 
 </style>
 
-      <center><h1 style="background-color:"";color:white"> Lista de Planes</h1></center>
+      
 
 
    <table>
@@ -32,7 +31,7 @@ td, th {
     <th>Nombre</th>
     <th>Descripcion</th>
     <th>Precio</th>
-    <th>Realizar Reserva</th>
+    <th>Confirmar Reserva</th>
     
   </tr>
       <?php 
@@ -45,7 +44,7 @@ td, th {
             <td style="color:black"> <?php echo $plan->nombre ?></td>
             <td style="color:black"> <?php echo $plan->descripcion ?> </td>
             <td style="color:black"> <?php echo $plan->precio ?> </td>
-            <td><a href="<?=base_url()?>Reserva/hola/<?php echo $plan->id?>">Realizar Reserva</a></td>
+            <td><a href="<?=base_url()?>Reserva/reservar/<?php echo $plan->id?>">Confirmar Reserva</a></td>
             
             </tr>
 
@@ -54,11 +53,12 @@ td, th {
 
          <?php endforeach; ?>
       </table>
-   
+
+
+   <a href="<?=base_url()?>Plan/index">Devolver</a>
         </div>
         
             </div>
 
-      <hr class="featurette-divider">
-
+    
       <!-- /Fin descripción -->

@@ -10,24 +10,62 @@ $this->load->helper('form');
 $this->load->model('Reservas');
 $this->load->helper('url');
 $this->load->library('form_validation');
-$this->load->library("session");
-
+$this->load->library('session');
 }
 
 
 function index($id=null){
-$s=$this->session->userdata('correo');	
+$email=$this->session->userdata('correo');	
+$usua['usuario']=$this->Reservas->usuario($email);
+$datosplanes['datosdelplan']=$this->Reservas->plan($id);
+
 $datos = array('titulo' => "Inicio  Sesión");
-$datosplanes['datosdelplan']=$this->Reservas->obtenerdatos($id,$s);
 $this->load->view('Vista_basica/header', $datos);
 		//$this->load->view('Detalle_Planes/Quince', $imagenes);
+        $this->load->view('tablareservas', $usua);          
 		$this->load->view('tablareserva', $datosplanes);
 		$this->load->view('Vista_basica/footer');
+	
 	}
 
 
-	function hola(){
-		redirect('Plan');
-	}
+function reservar($id=null){
+$datos = array('titulo' => "Inicio  Sesión");
+$this->load->view('Vista_basica/header', $datos);
+$this->load->view('confirmareserva',$id);
+$this->load->view('Vista_basica/footer');
+
+}
+function confirmar(){
+
+$a=$this->session->userdata('correo');	
+
+$c=$this->Reservas->revisarcorreo($a);
+
+
+
+$datosreserva= array(
+	 
+	 'idUsuario' => $c->id, 
+	 'idPlan'=> $this->input->post('idPlan'),
+	 'fecha' => $this->input->post('fecha'),
+	 'hora' =>$this->input->post('hora')
+	 );
+
+     $this->Reservas->creareserva($datosreserva);
+     
+          echo "Registro completado";
+          Redirect('Reserva/total');
+          
+}
+function total(){
+	      $a=$this->session->userdata('correo');
+	      $datosplanes['usu']= $this->Reservas->total($a);
+          $datos = array('titulo' => "Inicio  Sesión");
+          $this->load->view('Vista_basica/header', $datos);
+          $this->load->view('totalreserva', $datosplanes);
+          $this->load->view('Vista_basica/footer');
+}
+
 }
 ?>

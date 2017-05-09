@@ -86,7 +86,13 @@ else{
 
 }
 
-
+public function cerrar_sesion() {
+      $usuario_data = array(
+         'logueado' => FALSE
+      );
+      $this->session->set_userdata($usuario_data);
+      redirect('Sesion/iniciarSesion');
+   }
 
 
 }
