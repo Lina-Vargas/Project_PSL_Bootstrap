@@ -521,3 +521,7 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+$config['numero_tarjeta_credito'] = '4012888888881881';
+$config['cvv'] = '1234';
+$config['año_vencimiento'] = '2019';
+$config['mes_vencimiento'] = '12';
