@@ -51,8 +51,6 @@ $datosreserva= array(
 	 'fecha' => $this->input->post('fecha'),
 	 'hora' =>$this->input->post('hora')
 	 );
-      $fecha =$this->input->post('fecha');
-	 $hora = $this->input->post('hora');
 
      $this->Reservas->creareserva($datosreserva);
      
