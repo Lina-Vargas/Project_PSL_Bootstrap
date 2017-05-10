@@ -10,8 +10,8 @@
 
  
  $last = end($this->uri->segments);
-        $fecha= array('name'=>'fecha','placeholder'=>'escribe tu fecha');
-   $hora = array('name'=>'hora','placeholder'=>'escribe tu hora'); 
+        $fecha= array('name'=>'fecha','placeholder'=>'escribe tu fecha','type'=>'Date','value'=>'<?php echo date("Y-m-d");?>','step'=>'1','min'=>'2017-01-01','max'=>'2017-12-31');
+   $hora = array('name'=>'hora','placeholder'=>'escribe tu hora','type'=>'Time'); 
    
 
    ?>
