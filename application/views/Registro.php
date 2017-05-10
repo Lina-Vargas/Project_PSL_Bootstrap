@@ -16,7 +16,7 @@
     $celular = array('name'=>'celular','placeholder'=>'escribe tu celular', 'class' => 'form-control','value'=>set_value('celular'));
     $correo =  array('name'=>'correo','placeholder'=>'escribe tu correo', 'class' => 'form-control','value'=>set_value('correo'));
   $direccion = array('name'=>'direccion','placeholder'=>'escribe tu direccion', 'class' => 'form-control','value'=>set_value('direccion'));
-    $clave = array('name'=>'clave','placeholder'=>'escribe tu clave', 'class' => 'form-control','value'=>set_value('clave'));
+    $clave = array('name'=>'clave','placeholder'=>'escribe tu clave', 'type'=>'password','class' => 'form-control','value'=>set_value('clave'));
 ?>
 <?= form_label('Numero De Documento *:','id')?>
 <?= form_input($id)?><?php echo form_error('id')?>
