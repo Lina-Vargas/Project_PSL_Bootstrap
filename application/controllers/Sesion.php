@@ -32,9 +32,7 @@ if($this->input->post()){
 	 		
 	 $this->form_validation->set_rules('correo','Correo electrónico/','required|valid_email');
 	 $this->form_validation->set_rules('clave','Clave','required');
-        
-
-
+   
 if($this->form_validation->run()==True){
 	 	  $Valida=$this->Usuario->revisarcorreo($email);
 
@@ -54,9 +52,7 @@ if($this->form_validation->run()==True){
 		$this->load->view('InicioSesion',$mensajes);
 		$this->load->view('Vista_basica/footer');
       	}
-      
-
-else{
+      else{
 	$usuario_data = array(
                'correo' => $email,
                 'clave'=>$password,    
@@ -83,7 +79,6 @@ else{
 		$this->load->view('InicioSesion',$mensajes);
 		$this->load->view('Vista_basica/footer');
 }
-
 }
 
 public function cerrar_sesion() {
@@ -93,8 +88,6 @@ public function cerrar_sesion() {
       $this->session->set_userdata($usuario_data);
       redirect('Sesion/iniciarSesion');
    }
-
-
 }
 
 ?>	

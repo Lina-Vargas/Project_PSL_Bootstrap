@@ -77,10 +77,6 @@ $this->load->view('confirmareservas',$id);
 	$this->load->view('Vista_basica/footer');
 }
 
-
-
-
-
           
 }
 function total(){
