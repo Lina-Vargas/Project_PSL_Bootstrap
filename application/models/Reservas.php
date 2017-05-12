@@ -56,6 +56,18 @@ $query = $this->db->get();
 	return null; 
 }
 
+function revisarinfor($fecha){
+$query = $this->db->where('fecha',$fecha);
+$query = $this->db->get('reserva');
+	
+	return $query; 
+}
+function valid($fecha,$hora){
+$query = $this->db->where('fecha',$fecha);
+$query = $this->db->where('hora',$hora);
+$query = $this->db->get('reserva');
+return $query->result();
+}
 
 
 }

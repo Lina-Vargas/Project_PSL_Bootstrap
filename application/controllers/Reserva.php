@@ -19,8 +19,8 @@ $email=$this->session->userdata('correo');
 $usua['usuario']=$this->Reservas->usuario($email);
 $datosplanes['datosdelplan']=$this->Reservas->plan($id);
 
-$datos = array('titulo' => "Inicio  Sesión");
-$this->load->view('Vista_basica/header', $datos);
+$datos = array('titulo' => "");
+$this->load->view('Vista_basica/header1', $datos);
 		//$this->load->view('Detalle_Planes/Quince', $imagenes);
         $this->load->view('tablareservas', $usua);          
 		$this->load->view('tablareserva', $datosplanes);
@@ -30,8 +30,8 @@ $this->load->view('Vista_basica/header', $datos);
 
 
 function reservar($id=null){
-$datos = array('titulo' => "Inicio  Sesión");
-$this->load->view('Vista_basica/header', $datos);
+$datos = array('titulo' => "");
+$this->load->view('Vista_basica/header1', $datos);
 $this->load->view('confirmareserva',$id);
 $this->load->view('Vista_basica/footer');
 
@@ -52,17 +52,42 @@ $datosreserva= array(
 	 'hora' =>$this->input->post('hora')
 	 );
 
-     $this->Reservas->creareserva($datosreserva);
+     //$this->Reservas->creareserva($datosreserva);
+     
+          //echo "Registro completado";
+          //Redirect('Reserva/total');
+
+$id['iden']= array('idPlan'=> $this->input->post('idPlan'),'mensaje' => "Reserva Con Esta Fecha y Hora, Esta Ya Registrada");
+$fecha= $this->input->post('fecha');
+$hora = $this->input->post('hora');
+$validar=$this->Reservas->valid($fecha,$hora);
+
+ if (empty($validar)){
+  $this->Reservas->creareserva($datosreserva);
      
           echo "Registro completado";
           Redirect('Reserva/total');
+ }
+else 
+{
+	
+	$datos = array('titulo' => "");
+$this->load->view('Vista_basica/header1', $datos);
+$this->load->view('confirmareservas',$id);
+	$this->load->view('Vista_basica/footer');
+}
+
+
+
+
+
           
 }
 function total(){
 	      $a=$this->session->userdata('correo');
 	      $datosplanes['usu']= $this->Reservas->total($a);
-          $datos = array('titulo' => "Inicio  Sesión");
-          $this->load->view('Vista_basica/header', $datos);
+          $datos = array('titulo' => "");
+          $this->load->view('Vista_basica/header1', $datos);
           $this->load->view('totalreserva', $datosplanes);
           $this->load->view('Vista_basica/footer');
 }
